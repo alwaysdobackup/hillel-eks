@@ -5,10 +5,12 @@ terraform {
   # Замініть ОРГАНІЗАЦІЯ на ім'я своєї організації.
   # Якщо працюєте локально зі станом у файлі — закоментуйте весь блок cloud.
   cloud {
-    organization = "ОРГАНІЗАЦІЯ"
+    organization = "letsplay"
 
     workspaces {
-      tags = ["hillel-eks"]
+      tags = {
+        "name" = "hillel-eks"
+      }
     }
   }
 
